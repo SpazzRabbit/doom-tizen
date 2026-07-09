@@ -18,19 +18,20 @@ This project uses Chocolate Doom compiled to WebAssembly via Emscripten and wrap
 
 ## Installation
 
-The easiest way to install the generated `.wgt` file on your Samsung TV is by using:
+### 1. Enable Developer Mode on your TV
 
-### **Samsung Jellyfin Installer**  
-https://github.com/Jellyfin2Samsung/Samsung-Jellyfin-Installer
+1. From the Apps screen, press `1 2 3 4 5` on the remote
+2. Toggle **Developer Mode = ON**
+3. Enter your PC's LAN IP in **Host PC IP**
+4. Reboot the TV
 
-Although designed for Jellyfin, the installer supports **any** Tizen widget and provides a streamlined installation workflow.
+### 2. Install the `.wgt`
 
-**Steps:**
-1. Download and launch the Samsung Jellyfin Installer  
-2. Enable Developer Mode on your TV and connect it to the installer  
-3. Select the generated `Doom.wgt` file  
-4. Install it onto the TV  
-5. Launch Doom from the TV's app menu
+
+#### Install with Apps2Samsung
+The easiest way to install the generated `.wgt` file on your Samsung TV is by using Apps2Samsung:
+Download the latest version from [Apps2Samsung](https://github.com/Apps2Samsung/Apps2Samsung/releases/latest) choose Tizen Community as release and choose doom.
+Launch Doom from the TV's app menu
 
 ---
 
@@ -99,9 +100,7 @@ To play the full version:
 ---
 
 ## Controls
-
 ### Samsung TV Remote
-
 | Button | Action |
 |--------|--------|
 | **Arrow Keys** | Move forward/back, turn left/right |
@@ -117,6 +116,18 @@ To play the full version:
 | **Rewind** | Strafe left |
 | **Fast Forward** | Strafe right |
 
+### Controller
+| Button | Action |
+|--------|--------|
+| **D-Pad / Left Stick** | Move forward/back, turn left/right |
+| **A** | Use / confirm in menus |
+| **B** | Fire weapon |
+| **X** | Show map |
+| **Y** | Open ESC menu |
+| **Back** | Open ESC menu |
+| **Start** | Confirm in menus |
+| **LB** | Strafe left |
+| **RB** | Strafe right |
 ---
 
 ## Project Structure
