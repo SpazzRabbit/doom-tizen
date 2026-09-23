@@ -78,8 +78,9 @@ ENV EMSCRIPTEN_FLAGS="\
 -s DISABLE_EXCEPTION_CATCHING=1 \
 -s WASM_BIGINT=0"
 
-# Tizen 5.5 (2020 sets) runs Chromium 69: no bulk memory, sign-ext, non-trapping float-to-int
-# or BigInt at the JS/WASM boundary (WASM_BIGINT=0 above). Current Emscripten refuses
+# Tizen 5.5 (2020 sets) runs Chromium 69: no bulk memory, non-trapping float-to-int or BigInt
+# at the JS/WASM boundary (WASM_BIGINT=0 above). Sign-extension ops do work there, but they are
+# lowered as well so the module stays within the MVP feature set. Current Emscripten refuses
 # MIN_CHROME_VERSION below 85, so the features are switched off directly instead.
 ENV WASM_COMPAT="-mno-bulk-memory -mno-bulk-memory-opt -mno-sign-ext -mno-nontrapping-fptoint"
 ENV CFLAGS="-O3 -flto $WASM_COMPAT -DHAVE_DECL_STRCASECMP=1 -DHAVE_DECL_STRNCASECMP=1"
